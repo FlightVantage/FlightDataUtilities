@@ -111,7 +111,7 @@ def get_conf_detents():
     :rtype: list
     '''
     detents = set()
-    for x in mi.CONF_MODEL_MAP, mi.CONF_SERIES_MAP, mi.CONF_FAMILY_MAP:
+    for x in mi.CONF_MODEL_MAP, mi.CONF_SERIES_MAP, mi.CONF_FAMILY_MAP, mi.CONF_SERIES_MAP_NO_SLAT:
         detents.update(itertools.chain.from_iterable(v.keys() for v in x.values()))
     return natsorted(detents)
 

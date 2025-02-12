@@ -27,7 +27,9 @@ Utilities for looking up model information for various aircraft.
 FLAP_MODEL_MAP = {}
 
 
-FLAP_SERIES_MAP = {}
+FLAP_SERIES_MAP = {
+    'A321': (0, 5, 10, 15, 18, 22)
+}
 
 
 FLAP_FAMILY_MAP = {
@@ -146,6 +148,18 @@ CONF_FAMILY_MAP = {
     },
 }
 
+# Same as above but uses TRAILING EDGE FLAPS ANGLE and FLAPS HANDLE INDEX to dervive conf
+CONF_SERIES_MAP_NO_SLAT = {
+    'A321': {
+        '0':    (0, 0),
+        '1':    (5, 1),
+        '1+F':  (10, 2),
+        '2':    (15, 3),
+        '3':    (18, 4),
+        'Full': (22, 5),
+    }
+}
+
 
 #############################################################################
 # Lever Selections
@@ -172,7 +186,16 @@ CONF_FAMILY_MAP = {
 LEVER_MODEL_MAP = {}
 
 
-LEVER_SERIES_MAP = {}
+LEVER_SERIES_MAP = {
+    'A321': {
+        (0,  '0'):   (0, 0, None),
+        (1,  '1'):   (0, 5, None),
+        (2,  '1+F'): (0, 10, None),
+        (3,  '2'):   (0, 15, None),
+        (4,  '3'):   (0, 18, None),
+        (5,  'Full'): (0, 22, None),
+    }
+}
 
 
 LEVER_FAMILY_MAP = {

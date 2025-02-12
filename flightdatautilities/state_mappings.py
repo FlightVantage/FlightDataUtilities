@@ -21,7 +21,7 @@ PARAMETER_CORRECTIONS = {
     'AC Essential Bus': {1: 'On'},
     'ADF (*) Selected (*)': {1: 'Selected'},
     'AP (*) Disconnect': {1: 'Disconnect'},
-    'AP (*) Engaged': {1: 'Engaged'},
+    'AP (*) Engaged': {1.0: 'Engaged'},
     'AP Descend': {1: 'Engaged'},
     'AP Altitude Capture': {1: 'Engaged'},
     'AP Backcourse': {1: 'Engaged'},

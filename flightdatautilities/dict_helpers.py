@@ -58,3 +58,7 @@ def dmerge(x, y, overwrite=()):
         else:
             dmerge(x[k], v, overwrite=overwrite)
     return x
+
+def dict_filter(d, remove):
+    # Remove keys specified in remove (expects remove to be an iterable of keys)
+    return {k: v for k, v in d.items() if k not in remove}
